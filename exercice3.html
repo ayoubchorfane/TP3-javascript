@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="resultat"></p>
+    <script>
+        function getSurface(base,hauteur){
+            return(base * hauteur)/2;
+        }
+        let base=prompt("donner la base");
+        let hauteur=prompt("donner la hateur");
+        let surface=getSurface(base,hauteur);
+        document.getElementById("resultat").innerHTML="la surface de triangle est"+ surface;
+
+    </script>
+</body>
+</html>
