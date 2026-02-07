@@ -20,5 +20,27 @@
     document.getElementById("res1").innerHTML = resultat1;
 </script>
 </body>
-
+<h3>Nombres pairs de 1 à 10</h3>
+<p id="res2"></p>
+<script>
+    let resultat2="";
+    for(let i=1;i<10;i++){
+        if(i%2===0){
+            resultat2+=i+" ";
+        }
+    }
+    document.getElementById("res2").innerHTML=resultat2;
+</script>
+<h3>nombres impaires de 1 à 10 (en decrementant)</h3>
+<p id="res3"></p>
+<script>
+    let resultat3="";
+    let i=9;
+    while(i>=1){
+        resultat3+=i+" ";
+        i-=2;
+    }
+    document.getElementById("res3").innerHTML= resultat3;
+</script>
 </html>
+
