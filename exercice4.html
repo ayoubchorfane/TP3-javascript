@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4 Calcul TVA</title>
+</head>
+<body>
+    <h1>Calcul du Prix TTC</h1>
+    <div id="resultat"></div>
+    <br>
+    <button onclick="confirmerAchat()">Confirmer l'achat</button>
+    <script>
+        let prixHT = parseFloat(prompt("Entrez le prix HT :"));
+        let TVA = parseFloat(prompt("Entrez le taux de TVA (%):"));
+        let tauxCalcul = (TVA / 100) + 1;
+        let prixTTC = prixHT * tauxCalcul;
+        let element = document.getElementById("resultat");
+        if (prixTTC > 100) {
+            element.innerHTML = '<h1 style="color: red;">Prix TTC = ' + prixTTC + '</h1>';
+        } else {
+            element.innerHTML = '<h1 style="color: green;">Prix TTC = ' + prixTTC + '</h1>';
+        }
+        function confirmerAchat() {
+            let confirmation = confirm("Voulez-vous confirmer l'achat ?");
+            if (confirmation) {
+                document.write("L'utilisateur peut confirmer l'achat.");
+            } else {
+                document.write("L'achat a été annulé.");
+            }
+        }
+    </script>
+</body>
+</html>
